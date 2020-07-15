@@ -1,6 +1,6 @@
 /**
  * Jesse Business Group
- * Starter.java, 2020年6月13日 下午4:26:41
+ * Starter.java
  */
 package org.jqss.m3u8p;
 
