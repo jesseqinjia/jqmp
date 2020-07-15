@@ -40,7 +40,7 @@ public class MUTaskInput extends JFrame {
 	public static String G2TEXT = "M3U8 Index URL";
 	public static String G3TEXT = "Load M3U8";
 	public static String G4TEXT = "From M3U8 Index List File";
-	public static String G5TEXT = "JQSS Homepage";
+	public static String G5TEXT = "JQSS Github";
 	public static String G6TEXT = "shudown computer";
 	public static String G7TEXT = "Start Number:";
 	public static String VIDEO_PATH = "./";
