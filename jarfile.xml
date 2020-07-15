@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_jar" name="Create Runnable Jar for Project jqmp">
+	<tstamp>
+		<format property="build.time" pattern="yyyyMMdd.hhmm"/>
+	</tstamp>
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}/.."/>
+    <property name="dir.jarfile" value="${dir.buildfile}"/>
+    <property name="dir.jars" value="${dir.buildfile}/../builds"/>
+	
+	<loadproperties srcFile="./src/org/jqss/m3u8p/m3u8p.properties"/>
+	
+	<property file="${dir.buildfile}/src/org/jqss/m3u8p/m3u8p.propertes"/>
+	<property name="version" value="${ver}.${build.time}"/>
+
+	<target depends="create_bin_jar,create_src_jar,move_files" name="create_jar"/>
+    <target name="create_bin_jar">
+        <jar destfile="${dir.jarfile}/jqmp-bin-v${version}.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="org.jqss.m3u8p.Starter"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="${dir.jarfile}/bin"/>
+        </jar>
+    </target>
+    <target name="create_src_jar">
+        <jar destfile="${dir.jarfile}/jqmp-src-v${version}.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="org.jqss.m3u8p.Starter"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="${dir.jarfile}/src"/>
+        </jar>
+    </target>
+	<target name="move_files">
+		<move file="${dir.jarfile}/jqmp-bin-v${version}.jar" todir="${dir.jars}"/>
+		<move file="${dir.jarfile}/jqmp-src-v${version}.jar" todir="${dir.jars}"/>
+	</target>
+</project>
