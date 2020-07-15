@@ -2,12 +2,12 @@
 
 JQSS m3u8 downloader
 
-V2.4 features：
-1.Customer auto number
-2.Donot close window after download
-
-download:https://pan.baidu.com/s/1tqAdig2E-MTnuHXkUIXZcQ  code:cxs4
-
+V2.4 features：<br>
+1.Customer auto number <br>
+2.Donot close window after download<br>
+<br>
+download:https://pan.baidu.com/s/1tqAdig2E-MTnuHXkUIXZcQ  code:cxs4<br>
+<br>
 1.download m3u8 <br>
 2.convert *.t to *.mp4 <br>
 3.batch download by file or list <br>
